@@ -1,0 +1,48 @@
+
+
+Add Student 
+----------------------
+students/add
+Method POST
+{"loginId":"2321","firstName":"Go","lastName":"Whoknows","email":"Student@mum.edu","role":"STUDENT","fixed":false}
+---------------------
+
+
+
+Update Student
+--------------------
+students/update
+Method PUT
+{"id":1,loginId":"2321","firstName":"Go","lastName":"Whoknows","email":"Student@mum.edu","role":"STUDENT","fixed":false}
+
+students/update   update special data
+{"id":1,"enrolledSections":[23,4,23,4],"takenSections":[] }
+
+--------------------
+
+
+
+
+get Student
+----------- 
+Method GET
+http://localhost:8082/students/get/{id}
+------------------------------------------
+
+
+getAll Students
+----------- 
+Method GET
+http://localhost:8082/students
+------------------------------------------
+
+
+
+delete Student
+method DELETE
+http://localhost:8082/students/delete/{id}
+
+
+
+
+

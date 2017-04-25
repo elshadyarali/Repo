@@ -1,0 +1,29 @@
+
+
+
+-------------------
+Get All Faculties
+/faculties
+
+
+----------------------
+Add FACULTY
+/faculties/get/{id}
+{"loginId":"3432","firstName":"Salman","lastName":"Momomio","email":"faculty@mum.edu","role":"FACULTY"}
+
+-----------------------
+/faculties/update
+{"id":2,"loginId":"3432","firstName":"Salman","lastName":"Momomio","email":"faculty@mum.edu","role":"FACULTY"}
+
+update special info 
+/faculties/update  - send id and then special filds
+{"id":3,"specializedCourses":[12,23],"availableBlocks":[2,4],"assignedSections":[5,1]}
+
+
+---------------------
+
+delete
+/faculties/delete/{id}
+
+
+
