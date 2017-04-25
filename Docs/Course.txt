@@ -1,0 +1,36 @@
+
+
+get Course 
+METHOD GET
+/courses/get/{courseid}
+
+--------------------------------------
+get course sections
+METHOD GET
+/courses/get/{courseid}/sections
+------------------------------------
+get all courses
+METHOD GET
+/courses
+----------------------------------------
+add course 
+METHOD POST
+/courses/add
+json 
+{"courseCode":"45342","courseName":"EA"}
+-----------------------------------------------
+add course with prereq
+METHOD POST
+/courses/add/{preregId}/coursedata
+json 
+{"courseCode":"45342","courseName":"EA"}    and define {preregId}
+-------------------------------------------
+
+update course 
+METHOD PUT
+/courses/update
+
+-------------------------------------
+Delete course 
+METHOD DELETE
+/courses/delete/{courseid}-----

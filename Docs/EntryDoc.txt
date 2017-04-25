@@ -1,0 +1,132 @@
+----------------------------------------
+ENTRY 
+--
+GET ENTRY
+url
+http://localhost:8081//entrys/get/{id} - 1 is {id} 
+example : http://localhost:8081//entrys/get/1 
+Request Method :GET
+request
+json
+{"name":"JanuaryEntry","startDate":"2017-01-24","endDate":"2017-09-22","totalMPPStudents":20,"totalFPPStudents":42,"blockList":[],"id":1}
+
+response :200  Ok;
+
+----------------------------------------
+
+ADD Entry
+url
+http://localhost:8081/entrys/add
+Request Method :POST
+request
+json
+{"name":"AprelEntry","startDate":"2017-4-24","endDate":"2017-11-22","totalMPPStudents":20,"totalFPPStudents":42}
+
+response 201 : created
+
+be careful about date format if day and months starts with 0 then delete it . exmpl: 04 should be just 4;
+
+--------------------------------------
+
+Update Entry 
+
+url http://localhost:8081/entrys/update
+Request Method :PUT
+request json  
+ {
+    "name": "JanuaryEntry",
+    "startDate": "2017-1-24",
+    "endDate": "2018-9-22",
+    "totalMPPStudents": 20,
+    "totalFPPStudents": 42,
+    "id": 1
+  }
+
+response :200 :ok
+
+
+-------------------------
+DELETE
+
+url
+Request Method :DELETE
+http://localhost:8081/entrys/delete/{id}
+
+response :200 , ok 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-----------------------------
+GET ALL ENTRIES
+
+Request Method :GET
+url 
+http://localhost:8081/entrys
+
+response json 
+[
+  {
+    "name": "JanuaryEntry",
+    "startDate": "2017-01-24",
+    "endDate": "2017-09-22",
+    "totalMPPStudents": 20,
+    "totalFPPStudents": 42,
+    "blockList": [],
+    "id": 1
+  },
+  {
+    "name": "AprelEntry",
+    "startDate": "2017-04-23",
+    "endDate": "2017-11-21",
+    "totalMPPStudents": 20,
+    "totalFPPStudents": 42,
+    "blockList": [],
+    "id": 2
+  }
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

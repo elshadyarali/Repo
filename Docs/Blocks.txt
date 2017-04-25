@@ -1,0 +1,43 @@
+
+-----------------------------------------
+get Block by id
+Request Method : GET
+
+http://localhost:8081/blocks/get/{id}
+
+----------------------------------------
+get All Blocks
+Request Method : GET
+http://localhost:8081/blocks
+
+
+
+get Blocks Entry
+Request Method : GET
+http://localhost:8081/blocks/get/2/entry
+
+
+
+add Block
+
+Request Method : POST
+http://localhost:8081/blocks/add
+
+{"name":"JanuaryEntry","startDate":"2017-01-23","endDate":"2017-09-21","totalMPPStudents":20,"totalFPPStudents":42}
+
+
+
+http://localhost:8081/blocks/update
+Request Method : PUT
+{"name":"JanuaryEntry","startDate":"2017-01-23","endDate":"2017-09-21","totalMPPStudents":20,"totalFPPStudents":42,"id":2}
+
+
+http://localhost:8081/blocks/delete/{id}
+Request Method : DELETE
+
+
+
+
+
+
+

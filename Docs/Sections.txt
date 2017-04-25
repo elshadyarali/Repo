@@ -1,0 +1,29 @@
+
+
+
+Get Section by Id
+
+/sections/get/{sectionid}
+
+
+Get Sections by course Id
+/sections/get/bycourse/{courseid}
+
+getSections by Block Id
+/sections/get/byblock/{blockid}
+
+get all sections 
+/sections
+
+create section by courseid , block id 
+/sections/add/{courseId}/{blockId}/section
+json {"capacity":12,"enrolled":32,"facultyId":32} 
+
+
+update section 
+/sections/update
+{"id":1,"capacity":12,"enrolled":32,"facultyId":32} 
+
+
+delete section by id 
+/sections/delete/{sectionid}
