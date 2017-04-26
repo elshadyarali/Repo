@@ -44,5 +44,23 @@ public class UserServiceImpl implements UserService {
 		
 	}
 
+	@Override
+	public User getUserbyLoginId(String id) {
+		// TODO Auto-generated method stub
+		return userdao.findByLoginId(id);
+	}
+
+	@Override
+	public User login(String loginId, String password) {
+          
+		 
+		 User user =userdao.findByLoginId(loginId);
+         if(user!=null){
+        	 if(user.getPassword().equals(password))
+        		 return user;
+         }
+		return null;
+	}
+
 	
 }

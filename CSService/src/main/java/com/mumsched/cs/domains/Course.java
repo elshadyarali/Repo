@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -29,13 +30,24 @@ public class Course {
 	@Column(nullable = false)
 	private String courseName; 
 	
+	
+	private int SectionDefaultCapasity; 
+	
+	
+	public int getSectionDefaultCapasity() {
+		return SectionDefaultCapasity;
+	}
+
+	public void setSectionDefaultCapasity(int sectionDefaultCapasity) {
+		SectionDefaultCapasity = sectionDefaultCapasity;
+	}
+
 	@ManyToOne(cascade={CascadeType.ALL})
 	@JoinColumn(name="prereq_id")
 	private Course preReqCourId;
 	
-	@JsonIgnore
-	@OneToMany(fetch = FetchType.LAZY,cascade={CascadeType.ALL})
-	List<Block>targetblocks;
+	@ElementCollection
+	List<Long>targetblocks;
 	
 	@JsonIgnore
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "course",cascade={CascadeType.ALL})
@@ -73,12 +85,12 @@ public class Course {
 		this.preReqCourId = preReqCourId;
 	}
 
-	public List<Block> getBlockList() {
+	public List<Long> getBlockList() {
 		return targetblocks;
 	}
 
 	
-	public void setBlockList(List<Block> blockList) {
+	public void setBlockList(List<Long> blockList) {
 		this.targetblocks = blockList;
 	}
 

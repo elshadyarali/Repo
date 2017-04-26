@@ -36,7 +36,7 @@ public class Entry {
   @Column
   private int totalFPPStudents;
   
-    @JsonIgnore
+    
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "entry")
 	List<Block>blockList;
 

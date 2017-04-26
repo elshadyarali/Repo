@@ -47,7 +47,7 @@ public class CourseServiceImpl implements CourseService {
 	}
 
 	@Override
-	public List<Block> getTargetBlocks(Long id) {
+	public List<Long> getTargetBlocks(Long id) {
 		// TODO Auto-generated method stub
 		return dao.getOne(id).getBlockList();
 	}

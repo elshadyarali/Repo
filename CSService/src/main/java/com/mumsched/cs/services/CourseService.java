@@ -13,6 +13,6 @@ public interface CourseService {
 	List<Course> getAllCourses();
 	void updateCourse(Course course);
 	void deleteCourse(Long id);
-	List<Block> getTargetBlocks(Long id);
+	List<Long> getTargetBlocks(Long id);
 	List<Section> getSections(Long id);
 }

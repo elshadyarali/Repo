@@ -41,7 +41,12 @@ public class SectionEndpoint {
 		  
 	  }
 	  
-	
+	  @RequestMapping(value="/sections/get/byfaculty/{facultyId}",method = RequestMethod.GET)
+	  ResponseEntity<List<Section>> getSectionByfaculty(@PathVariable("facultyId") Long id){
+		  
+		  return new ResponseEntity<>(service.getSectionByFaculId(id),HttpStatus.OK);
+		  
+	  }
 	  
 	  
 	  
@@ -64,7 +69,12 @@ public class SectionEndpoint {
 		   return new ResponseEntity<>(HttpStatus.CREATED);
 	  }
 	  
-	
+	  @RequestMapping(value="/sections/add",method = RequestMethod.POST,consumes="application/json")
+	  ResponseEntity<?>  setSection(@RequestBody Section section) {
+		
+		service.createNewSection(section);
+		   return new ResponseEntity<>(HttpStatus.CREATED);
+	  }
 	  
 	  
 	  @RequestMapping(value="/sections/update",method = RequestMethod.PUT,consumes="application/json")

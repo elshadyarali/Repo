@@ -84,6 +84,13 @@ public class SectionServiceImpl implements SectionService {
 	}
 
 
+	@Override
+	public List<Section> getSectionByFaculId(Long id) {
+		// TODO Auto-generated method stub
+		return dao.findByFacultyId(id);
+	}
+
+
 
 
 	

@@ -24,14 +24,27 @@ public class UserEndpoint {
 	  @Autowired
 	  UserService service;
 
-	 
+	  @RequestMapping(value="/users/login/{loginId}/{password}",method = RequestMethod.GET)
+	  ResponseEntity<User> login(@PathVariable("loginId") String loginId,@PathVariable("password") String password){
+		  
+		  User user=service.login(loginId, password);
+		  if(user !=null) 
+			  return new ResponseEntity<>(user,HttpStatus.OK);
+		  return new ResponseEntity<>(null,HttpStatus.BAD_REQUEST);
+		  
+	  }
 	  @RequestMapping(value="/users/get/{userid}",method = RequestMethod.GET)
 	  ResponseEntity<User> getUser(@PathVariable("userid") Long id){
 		  
 		  return new ResponseEntity<>(service.getUser(id),HttpStatus.OK);
 		  
 	  }
-	  
+/*	  @RequestMapping(value="/users/get/byloginid/{loginId}",method = RequestMethod.GET)
+	  ResponseEntity<User> getUserByLogin(@PathVariable("loginId") String id){
+		  
+		  return new ResponseEntity<>(service.getUserbyLoginId(id),HttpStatus.OK);
+		  
+	  }*/
 	    
 	  @RequestMapping(value="/users",method = RequestMethod.GET)
 	  ResponseEntity<List<User>> getUsers(){

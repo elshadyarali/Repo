@@ -31,7 +31,7 @@ public class Section {
 	
 	private int enrolled;
 
-	
+	private Long scheduleVersion;
 	public Long getId() {
 		return id;
 	}
@@ -78,5 +78,13 @@ public class Section {
 
 	public void setEnrolled(int enrolled) {
 		this.enrolled = enrolled;
+	}
+
+	public Long getScheduleVersion() {
+		return scheduleVersion;
+	}
+
+	public void setScheduleVersion(Long scheduleVersion) {
+		this.scheduleVersion = scheduleVersion;
 	}
 }
