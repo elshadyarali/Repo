@@ -73,7 +73,8 @@ public class ScheduleServiceImpl implements ScheduleService {
 		   List<Course> coursesForBlock;
 		   Course[] courseList =restTemplate.getForObject(Config.csServiceURL+"courses", Course[].class);
 		   Faculty[] facultyList =restTemplate.getForObject(Config.usServiceURL+"faculties", Faculty[].class);
-		   Schedule sched=createNewSchedule(new Schedule(entryId));
+		   Schedule sch=new Schedule();sch.setEntry(entryId);sch.setName(entry.getName()+" schedule");
+		   Schedule sched=createNewSchedule(sch);
 		   
 		   
 		   // blocks 

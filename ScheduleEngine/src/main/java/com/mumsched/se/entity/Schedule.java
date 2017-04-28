@@ -30,13 +30,7 @@ public class Schedule {
 
 	private boolean  isApproved=false; 
 	
-    public Schedule(Long entryId) {
-		this.entry=entryId;
-	}
-
-	public Schedule(Entry entry2) {
-		// TODO Auto-generated constructor stub
-	}
+   
 
 	public boolean isApproved() {
 		return isApproved;

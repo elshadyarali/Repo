@@ -22,6 +22,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import com.mumsched.cs.domains.Course;
 import com.mumsched.cs.services.CourseService;
 @RestController
+@CrossOrigin(origins = "http://localhost:3000")
 public class CourseEndpoint {
 
 	  @Autowired

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
@@ -15,7 +16,7 @@ import com.mumsched.rs.domain.Section;
 
 @Component
 public class RegistrationService {
-
+    //@LoadBalanced
 	@Autowired
 	RestTemplate restTemplate; 
 	

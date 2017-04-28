@@ -9,6 +9,7 @@ import com.mumsched.cs.Repository.CourseDao;
 import com.mumsched.cs.domains.Block;
 import com.mumsched.cs.domains.Course;
 import com.mumsched.cs.domains.Section;
+import com.mumsched.cs.exception.ResourceNotFoundException;
 @Service
 public class CourseServiceImpl implements CourseService {
    @Autowired
@@ -22,8 +23,9 @@ public class CourseServiceImpl implements CourseService {
 
 	@Override
 	public Course getCourse(Long id) {
-
-        return  dao.findOne(id);
+		Course course =dao.findOne(id) ;
+		if(course!=null) throw new  ResourceNotFoundException("Course not found");
+        return course ;
 
 
 	}
