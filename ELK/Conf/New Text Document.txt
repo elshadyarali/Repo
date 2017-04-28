@@ -1,0 +1,10 @@
+
+run logstash -f logstash-simple.conf
+
+port localhost:4560
+
+
+Kibana http://localhost:5601
+
+
+Elastic search - localhost:9200
